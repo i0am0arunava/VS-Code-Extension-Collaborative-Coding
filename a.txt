@@ -1,0 +1,8 @@
+npm install -g @vscode/vsce
+
+$ vsce package
+
+$ vsce publish
+  add token from this site 
+visit this site: https://dev.azure.com/arunavapari/_usersSettings/tokens
+final page : https://marketplace.visualstudio.com/manage/publishers/arunavapari

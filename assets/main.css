@@ -1,0 +1,15 @@
+#chat-box {
+  height: 300px;
+  overflow-y: auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.user-message {
+  background-color: #007acc;
+  color: white;
+  padding: 6px 10px;
+  margin: 5px 0;
+  border-radius: 8px;
+  max-width: 80%;
+}
