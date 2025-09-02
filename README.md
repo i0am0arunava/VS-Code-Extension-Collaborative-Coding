@@ -73,7 +73,12 @@ View of different users collaborating in the session.
 Any folder created by one user is instantly visible to all collaborators.  
 <img width="240" height="511" alt="Folder Creation Visible to Others" src="https://github.com/user-attachments/assets/87a21966-33cf-4569-a9de-24199d3c35d9" />
 
+### 5. Features
 
+- **Technology Stack**:
+  -client: Vscode class Panel +Node.js
+  -backend: Node.js+ Typescript + Socket.io
+  -deployment: Azure Devops
 
 
 
