@@ -76,9 +76,10 @@ Any folder created by one user is instantly visible to all collaborators.
 ### 5. Features
 
 - **Technology Stack**:
-  -client: Vscode class Panel +Node.js
-  -backend: Node.js+ Typescript + Socket.io
-  -deployment: Azure Devops
+  - **Client:** VS Code Custom Panel + Node.js
+  - **Backend:** Node.js + TypeScript + Socket.io
+  - **Deployment:** Azure DevOps
+
 
 
 
