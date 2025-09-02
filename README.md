@@ -1,6 +1,14 @@
-# CodeTogether – VS code extention + Web Version
 
-**CodeTogether** is a VS Code extension that enables real-time collaborative coding directly inside your development environment. Work seamlessly with teammates, share code changes instantly, and communicate while coding—all without leaving VS Code.
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/d0051a67-eb68-493d-82dd-e68616994924" width="150" height="150" alt="pseudoeditor-icon-unplated" />
+</p>
+
+
+
+
+ <h1 align="center"> CodeTogether – VS code extention + Web Version </h1>
+
+**CodeTogether** is a VS Code extension that enables real-time collaborative coding directly inside your development environment. Work seamlessly with teammates, share code changes instantly, and communicate while coding—  all without leaving VS Code collaboratively .
 
 ### 1. Installation option- I
 Install from vscode extentionhub
@@ -58,19 +66,80 @@ Any folder created by one user is instantly visible to all collaborators.
 <img width="240" height="511" alt="Folder Creation Visible to Others" src="https://github.com/user-attachments/assets/87a21966-33cf-4569-a9de-24199d3c35d9" />
 
 
-## Live Extension
-Install and try **CodeTogether** from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=arunavapari.i0can0help0you)  
 
-You can use CodeTogether in two ways:  
-➡ **Web Version:** [Collaborative Coding Application v2](https://github.com/i0am0arunava/colaborative_codeing-_application_v-2-)  
-➡ **VS Code Extension:** [CodeTogether on Marketplace](https://marketplace.visualstudio.com/items?itemName=arunavapari.i0can0help0you)
+
+
+
+
+
+<br><br>
+<h1 align="center">Web Application Version</h1>
+<br><br>
+
+### Project Setup
+
+1. Start the development server:
+
+   ```bash
+
+   npm install 
+   npm run dev
+   # Project Setup
+
+1. Start the backend server:
+
+   ```bash
+   cd socketserver
+   npm install
+   npm start
+
+
+Welcome to our Collaborative Coding Platform! This project is a robust tool designed to facilitate real-time coding collaboration among developers using Next.js, Express.js, MongoDB, TypeScript, WebSocket, Webpack, and deployed on Amazon Web Services (AWS).
+
+
+![Screenshot 2024-09-01 123610](https://github.com/user-attachments/assets/1c673b8e-e5f7-433c-88a7-63dbf009264d)
+
+![Screenshot 2024-09-01 123539](https://github.com/user-attachments/assets/29d0841b-6d1a-45fb-9f31-5fcc73f7ad46)
+
+![Screenshot 2024-09-01 123433](https://github.com/user-attachments/assets/88bd7b90-e657-4225-9d5e-411f3beebde2)
+
+
+
+
+## Features
+
+- **Technology Stack**:
+  - Frontend: Next.js
+  - Backend: Express.js
+  - Database: MongoDB
+  - Language: TypeScript
+  - Real-time Communication: WebSocket
+  - Optimization: Webpack
+  - Deployment: AWS
+
+- **Key Features**:
+  - **Real-time Collaboration**: Code together in real-time with multiple users from anywhere.
+  - **Optimization**: Webpack ensures fast loading times and efficient code bundling.
+  - **Scalable Deployment**: Hosted on AWS for scalability and reliability.
+  - **User-friendly Interface**: Intuitive UI for seamless navigation and coding experience.
+
+## Getting Started
+
+To get the project up and running on your local machine, follow these steps:
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/i0am0arunava/colaborative_codeing-_application_v-2-.git
+2. **npm install**
+3. **npm run dev**:
+
+
+
+
+
+
+
 
 ## Contributing
 Contributions are welcome! Open an issue or submit a pull request on the [GitHub repository](https://github.com/your-repo) for suggestions, improvements, or bug fixes.
 
-## Acknowledgements
-This project leverages:  
-- [Node.js](https://nodejs.org/)  
-- [TypeScript](https://www.typescriptlang.org/)  
-- [VSCode API](https://code.visualstudio.com/api)  
-- [Socket.io](https://socket.io/) for real-time collaboration
