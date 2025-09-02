@@ -1,4 +1,4 @@
-# CodeTogether – Collaborative Coding Environment
+# CodeTogether – vS code extention
 
 **CodeTogether** is a VS Code extension that enables real-time collaborative coding directly inside your development environment. Work seamlessly with teammates, share code changes instantly, and communicate while coding—all without leaving VS Code.
 
