@@ -15,14 +15,17 @@
 
 **CodeTogether** is a VS Code extension that enables real-time collaborative coding directly inside your development environment. Work seamlessly with teammates, share code changes instantly, and communicate while coding—  all without leaving VS Code collaboratively .
 
-### 1. Installation option- I
+### 1. Installation option- I  [Install CodeTogether from Marketplace](https://marketplace.visualstudio.com/items?itemName=arunavapari.codetogether-vscode-extension)
 Install from vscode extentionhub
 
 
 <img width="1364" height="987" alt="Screenshot from 2025-09-03 01-02-57" src="https://github.com/user-attachments/assets/2482f148-baff-453a-848f-81d55022ed24" />
 
-### 2. Installation option- I
+### 2. Installation option- II
 Install from Microsoft Marketplace
+<b><b>
+[Install CodeTogether from Marketplace](https://marketplace.visualstudio.com/items?itemName=arunavapari.codetogether-vscode-extension)
+<b><b>
 <img width="1465" height="938" alt="Screenshot from 2025-09-03 01-00-55" src="https://github.com/user-attachments/assets/c987fe82-6e90-45e9-b5da-83db2319e597" />
 
 
