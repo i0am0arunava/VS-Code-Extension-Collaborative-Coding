@@ -1,0 +1,339 @@
+.hellow {
+  background-color: rgb(0, 0, 0);
+}
+.container {
+  display: flex;
+  padding: 0px;
+}
+.item1 {
+  width: 800px;
+  height: 630px;
+  background-color: rgb(26, 27, 25);
+  margin-left: 0px;
+
+  border: none;
+  overflow: auto;
+  outline: none;
+
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+
+  resize: none; /*remove the resize handle on the bottom right*/
+  padding: 10px;
+}
+
+.item2 {
+  width: 100px;
+  height: 630px;
+  background-color: rgb(12, 11, 12);
+  flex-grow: 1;
+}
+.upContainer {
+  display: flex;
+justify-content: space-evenly;
+  justify-content: flex-end;
+  width:1500px;
+  flex-grow: 1;
+}
+.i1,
+.i2,
+.i3,
+.i4,
+.i5 {
+  height: 20px;
+  padding: 1px;
+  padding-top: 0px;
+  border-radius: 2px;
+/* This should be secolot individually */
+color: rgb(255, 255, 255);
+  margin-top: 20px;
+  margin-right: 20px;
+ 
+}
+.i1{
+  font-size: 20px;
+}
+.runcode{
+  border-color: greenyellow;
+  border-width: 0px;
+}
+
+.typing-demo{
+  margin-right: 690px;
+width: 1500px;
+  animation: typing 4s steps(22) infinite, blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+margin-top: 30px;
+font-size: 40px;
+color: greenyellow;
+display: flex;  
+}
+.coders{
+  margin-top: 30px;
+  margin-left: 10px;
+  font-size: 10px;
+  color: #999;
+}
+.joinicon{
+  margin-top: 10px;
+  font-size: 10px;
+  color: greenyellow;
+}
+
+
+
+
+
+/* Individual background colors */
+
+.dialog-overlay {
+  position: fixed;
+  top: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  height: 300px;
+  padding: 20px;
+  background-color: rgba(88, 142, 102, 0.9);
+  backdrop-filter: blur(0px); /* Add blur effect */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+
+.dialog-content {
+  margin-bottom: 20px;
+}
+
+.form-row {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.form-row label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  font-size: 12px;
+  color: #999;
+  transition: all 0.2s ease;
+}
+
+.form-row input {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px dashed #ccc;
+  outline: none;
+  font-size: 16px;
+  transition: all 0.2s ease;
+  background-color: #000000;
+  border-radius: 5px;
+}
+
+.form-row input:focus,
+.form-row input:not(:placeholder-shown) {
+  border-bottom: 1px solid #007bff;
+}
+
+.form-row input:focus + label,
+.form-row input:not(:placeholder-shown) + label {
+  top: -20px;
+  font-size: 10px;
+  color: #ff3147;
+}
+
+.half {
+  display: inline-block;
+  width: 48%; /* Ensure the fields fit side by side with some margin */
+  position: relative;
+}
+
+.half:first-child {
+  margin-right: 4%;
+}
+
+.form-row input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.form-row button[type="submit"] {
+  background-color: #051c03;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 40px;
+  width: 450px;
+}
+
+.form-row button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.close-btn {
+  background-color: #132f0e;
+  color: #fff;
+  border: none;
+  border-radius: 60%;
+  width: 50px;
+  height: 30px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.close-btn:hover {
+  background-color: #999;
+}
+
+.form-row .checkbox-label {
+  display: flex;
+  align-items: center;
+}
+.myonline {
+  display: flex;
+  height: AUTO;
+  width: 340px;
+  margin-left: 10px;
+
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.334),
+    rgba(31, 32, 31, 0.537) 90%
+  );
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+.o1,
+.o2,
+.o3,
+.o4,
+.o5,
+.o6 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  border-radius: 100px;
+  height: 70px;
+  width: 70px;
+  margin-left: 30px;
+  display: flex;
+  color: white;
+
+  background: linear-gradient(
+    to right,
+    rgba(7, 101, 31, 0.334),
+    rgba(31, 32, 31, 0.537) 90%
+  );
+}
+.menuit {
+  color: #fff;
+}
+.helloww {
+
+  color:greenyellow;
+  margin-left: 60px;
+  margin-top: 20px;
+  font-size: 12px;
+}
+.ph {
+ 
+  margin-top: 75px;
+  font-size: 12px;
+  margin-left: -26px;
+}
+.clickme{
+  font-size: 13px;
+  color:rgb(80, 93, 61)
+}
+.mainp {
+  margin-top: 20px;
+  margin-left: 25px;
+  color: #007bff;
+}
+.toolbar {
+  background-color: rgb(0, 0, 0);
+}
+.i6 {
+ 
+  border-radius: 100px;
+  height: 50px;
+  width: 50px;
+
+  color: white;
+  margin-top: 10px;
+
+  background: linear-gradient(
+    to right,
+    rgba(7, 101, 31, 0.334),
+    rgba(31, 32, 31, 0.537) 90%
+  );
+}
+.mainp1 {
+  margin-top: 10px;
+  margin-left: 15px;
+  color: #007bff;
+  
+}
+
+
+/* custom-cursor.css */
+.monaco-editor .view-lines,
+.monaco-editor .monaco-mouse-cursor-text {
+  cursor: none;
+}
+.mouse{
+  position: absolute;
+  /* background-color: rgb(68, 255, 47); */
+  height: auto;
+  width: auto;
+
+color: #ffffff;
+
+
+
+}
+.ot{
+  position: absolute;
+  background-color: rgb(228, 156, 22);
+border-radius: 5px;
+color: #051c03;
+}
+.rm{
+  height: auto;
+  width:auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+
+}
+.rl{
+
+  height: 40px;
+  width: 120px;
+color: black;
+display: flex;
+justify-content: center;
+align-items: center;
+font-weight: bold;
+padding: 10px;
+border-radius: 5px;
+margin-left: 100px;
+font-size: 20px;
+}
+.type{
+  color: greenyellow;
+  font-size: 13px;
+}
