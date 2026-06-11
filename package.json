@@ -1,12 +1,12 @@
 {
   "name": "codetogether-vscode-extension",
   "displayName": "CodeTogether",
-  "description": "Start your conversation with this bot",
-  "version": "1.0.0",
+  "description": "CodeTogether is a VS Code extension that enables real-time collaborative coding directly inside VS Code. Work seamlessly with teammates, share code changes instantly, and communicate while coding.",
+  "version": "2.4.7",
   "publisher": "arunavapari",
   "repository": {
     "type": "git",
-    "url": "https://github.com/i0am0arunava/vscode_extention_SIMPLE_chatbot.git"
+    "url": "https://github.com/i0am0arunava/VS-Code-Extension-Collaborative-Coding"
   },
   "icon": "logo.png",
   "engines": {
@@ -15,7 +15,11 @@
   "categories": [
     "Other"
   ],
+  "vsce": {
+    "dependencies": false
+  },
   "activationEvents": [
+    "onStartupFinished",
     "onCommand:vscodeSidebar.openview",
     "onView:vscodeSidebar.openview"
   ],
@@ -60,6 +64,16 @@
           "when": "view == vscodeSidebar.openview"
         }
       ]
+    },
+    "configuration": {
+      "title": "CodeTogether",
+      "properties": {
+        "codeTogether.serverUrl": {
+          "type": "string",
+          "default": "http://localhost:3000",
+          "description": "Socket.IO server URL used for CodeTogether collaboration."
+        }
+      }
     }
   },
   "scripts": {
@@ -77,13 +91,11 @@
     "@types/vscode": "^1.61.0",
     "@typescript-eslint/eslint-plugin": "^4.31.1",
     "@typescript-eslint/parser": "^4.31.1",
-    "@vscode/test-electron": "^1.6.2",
+    "@vscode/test-electron": "^3.0.0",
     "eslint": "^7.32.0",
     "glob": "^7.1.7",
-    "mocha": "^9.1.1",
+    "mocha": "^11.7.6",
+    "socket.io-client": "^4.8.1",
     "typescript": "^4.4.3"
-  },
-  "dependencies": {
-    "socket.io-client": "^4.8.1"
   }
 }

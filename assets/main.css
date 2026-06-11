@@ -1,15 +1,251 @@
-#chat-box {
-  height: 300px;
-  overflow-y: auto;
-  padding: 10px;
-  border: 1px solid #ccc;
+:root {
+  --bg: #050505;
+  --card: rgba(18, 18, 18, 0.92);
+  --soft: rgba(255, 255, 255, 0.08);
+  --line: rgba(255, 255, 255, 0.14);
+  --text: #f5f5f5;
+  --muted: #a6a6a6;
+  --steel: linear-gradient(135deg, #ffffff, #8c9299, #f7f7f7, #30343a);
 }
 
-.user-message {
-  background-color: #007acc;
-  color: white;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(255,255,255,0.14), transparent 32%),
+    linear-gradient(145deg, #000, #121212 52%, #050505);
+}
+
+.collab-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 14px;
+}
+
+.hero-panel,
+.join-panel,
+.room-panel {
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: var(--card);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(16px);
+}
+
+.hero-panel {
+  padding: 18px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.12), transparent);
+  transform: translateX(-120%);
+  animation: reflection 4s infinite;
+}
+
+.brand {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  color: #050505;
+  background: var(--steel);
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.eyebrow {
+  margin: 0 0 4px;
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+  margin: 16px 0;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.room-status {
+  position: relative;
+  z-index: 1;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: var(--soft);
+  border: 1px solid var(--line);
+  font-size: 12px;
+}
+
+.status-dot,
+.online,
+.idle {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.status-dot,
+.online {
+  background: #ffffff;
+  box-shadow: 0 0 14px rgba(255,255,255,0.75);
+}
+
+.idle {
+  background: #777;
+}
+
+.join-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px;
+}
+
+label {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+input {
+  width: 100%;
+  padding: 13px 14px;
+  color: var(--text);
+  background: rgba(255,255,255,0.07);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  outline: none;
+}
+
+input:focus {
+  border-color: rgba(255,255,255,0.5);
+}
+
+button {
+  margin-top: 6px;
+  padding: 13px;
+  border: 0;
+  border-radius: 14px;
+  color: #050505;
+  background: var(--steel);
+  font-weight: 900;
+  cursor: pointer;
+}
+
+button.joined {
+  opacity: 0.85;
+}
+
+.room-panel {
+  flex: 1;
+  padding: 16px;
+  overflow: hidden;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+#member-count {
   padding: 6px 10px;
-  margin: 5px 0;
-  border-radius: 8px;
-  max-width: 80%;
+  border-radius: 999px;
+  color: var(--muted);
+  background: var(--soft);
+  border: 1px solid var(--line);
+  font-size: 12px;
+}
+
+.members-list {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.member-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px;
+  border-radius: 18px;
+  background: var(--soft);
+  border: 1px solid var(--line);
+}
+
+.avatar {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  color: #050505;
+  background: var(--steel);
+  font-weight: 900;
+}
+
+.member-info {
+  flex: 1;
+}
+
+.member-info strong {
+  display: block;
+}
+
+.member-info span,
+.empty-state {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.empty-state {
+  padding: 18px;
+  border: 1px dashed var(--line);
+  border-radius: 18px;
+  text-align: center;
+}
+
+@keyframes reflection {
+  50%,
+  100% {
+    transform: translateX(120%);
+  }
 }

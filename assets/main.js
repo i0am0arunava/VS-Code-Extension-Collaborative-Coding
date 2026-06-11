@@ -1,35 +1,64 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const chatBox = document.getElementById("chat-box");
-  const userInput = document.getElementById("user-input");
-  const sendButton = document.getElementById("send-button");
-        
-  // Handle sending a message
-  function sendMessage() {
-    
-    const message = userInput.value.trim();
-    console.log("hell",message);
-    if (message) {
-      // Create message element
-      const msgDiv = document.createElement("div");
-      msgDiv.className = "user-message";
-      msgDiv.textContent = message;
+  const nameInput = document.getElementById("name-input");
+  const roomInput = document.getElementById("room-input");
+  const joinButton = document.getElementById("join-button");
+  const membersList = document.getElementById("members-list");
+  const roomTitle = document.getElementById("room-title");
+  const memberCount = document.getElementById("member-count");
 
-      // Append to chat box
-      chatBox.appendChild(msgDiv);
+  const demoMembers = ["Aarav", "Ishita", "Dev"];
 
-      // Scroll to bottom
-      chatBox.scrollTop = chatBox.scrollHeight;
+  function createMember(name, role, active = true) {
+    const member = document.createElement("div");
+    member.className = "member-card";
 
-      // Clear input
-      userInput.value = "";
-    }
+    member.innerHTML = `
+      <div class="avatar">${name.charAt(0).toUpperCase()}</div>
+      <div class="member-info">
+        <strong>${name}</strong>
+        <span>${role}</span>
+      </div>
+      <div class="${active ? "online" : "idle"}"></div>
+    `;
+
+    return member;
   }
 
-  // Event listeners
-  sendButton.addEventListener("click", sendMessage);
-  userInput.addEventListener("keypress", (e) => {
-    if (e.key === "Enter") {
-      sendMessage();
+  function joinRoom() {
+    const name = nameInput.value.trim();
+    const room = roomInput.value.trim();
+
+    if (!name || !room) {
+      joinButton.textContent = "Enter details first";
+      setTimeout(() => {
+        joinButton.textContent = "Join Room";
+      }, 1200);
+      return;
     }
+
+    membersList.innerHTML = "";
+    roomTitle.textContent = `Room #${room}`;
+
+    membersList.appendChild(createMember(name, "You • Code Editor Host"));
+
+    demoMembers.forEach((member, index) => {
+      membersList.appendChild(
+        createMember(member, index === 0 ? "Editing index.ts" : "Viewing workspace")
+      );
+    });
+
+    memberCount.textContent = `${demoMembers.length + 1} online`;
+    joinButton.textContent = "Joined";
+    joinButton.classList.add("joined");
+  }
+
+  joinButton.addEventListener("click", joinRoom);
+
+  [nameInput, roomInput].forEach((input) => {
+    input.addEventListener("keypress", (event) => {
+      if (event.key === "Enter") {
+        joinRoom();
+      }
+    });
   });
 });
