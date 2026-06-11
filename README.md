@@ -155,5 +155,5 @@ To get the project up and running on your local machine, follow these steps:
 
 
 ## Contributing
-Contributions are welcome! Open an issue or submit a pull request on the [GitHub repository](https://github.com/your-repo) for suggestions, improvements, or bug fixes.
+Contributions are welcome! Open an issue or submit a pull request on the [GitHub repository]([https://github.com/your-repo](https://github.com/i0am0arunava/VS-Code-Extension-Collaborative-Coding)) for suggestions, improvements, or bug fixes.
 
